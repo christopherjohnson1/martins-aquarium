@@ -19,7 +19,9 @@ textarea {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
-  letter-spacing: 2px;
+  letter-spacing: 11px;
+  padding-top: 30px;
+  padding-left: 33px;
 }
 
 #container {
@@ -32,6 +34,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .siteLogo {
     height: 10rem;
+    padding-bottom: 33px;
 }
 
 .content--left {

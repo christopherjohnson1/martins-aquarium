@@ -1,3 +1,14 @@
 .tips {
   border: 3px dotted forestgreen;
+  background-color: rgba(34, 139, 34, 0.65);
+  font-weight: bold;
+  list-style: georgian;
+}
+
+.tip {
+  border: 3px solid rgba(34, 139, 34, 0.8);
+  font-weight: bold;
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
 }
