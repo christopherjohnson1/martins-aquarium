@@ -1,7 +1,13 @@
 .fishes {
   border: 3px dotted dodgerblue;
+  background-color: rgba(30, 144, 255, 0.5);
 }
 
 .fish__image {
   height: 15rem;
+}
+
+.fish {
+  border: 3px solid white;
+  font-weight: bold;
 }
