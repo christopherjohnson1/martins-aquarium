@@ -9,15 +9,10 @@ export const locationsList = () => {
   // collection of locations from locationsDataProvider
   const locations = useLocations()
 
-  let locationsHtmlRepresentations = ""
-  for(const currentLocationObj of locations){
-    locationsHtmlRepresentations += locationsAsHtml(currentLocationObj)
-  }
-
   // updating HTML of DOM element with location list html
   contentElement.innerHTML += `
     <article class="locations">
-      ${locationsHtmlRepresentations}
+      ${locations.map(currentLocationObj => locationsAsHtml(currentLocationObj)).join('')}
       </article>
   `
 }

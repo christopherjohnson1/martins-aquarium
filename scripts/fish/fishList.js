@@ -9,15 +9,10 @@ export const fishList = () => {
   // collection of fish from fishDataProvider
   const fishes = useFish()
 
-  let fishHtmlRepresentations = ""
-  for(const currentFishObj of fishes){
-    fishHtmlRepresentations += fishAsHtml(currentFishObj)
-  }
-
   // updating HTML of DOM element with Fish List HTML
   contentElement.innerHTML += `
     <article class="fishes">
-      ${fishHtmlRepresentations}
+      ${fishes.map(currentFishObj => fishAsHtml(currentFishObj)).join('')}
       </article>
   `
 }
