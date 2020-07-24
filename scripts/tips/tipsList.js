@@ -8,15 +8,10 @@ export const tipList = () => {
   // collection of tips from tipsDataProvider
   const tips = useTip()
 
-  let tipsHtmlRepresentation = ""
-  for(const currentTipObj of tips){
-    tipsHtmlRepresentation += tipsAsHtml(currentTipObj)
-  }
-
   // updating HTML of DOM element with tip list HTML
   contentElement.innerHTML += `
     <aside class="tips">
-      ${tipsHtmlRepresentation}
+      ${tips.map(currentTipObj => tipsAsHtml(currentTipObj)).join('')}
     </aside>
   `
 }

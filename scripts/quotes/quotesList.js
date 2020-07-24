@@ -9,15 +9,10 @@ export const quoteList = () => {
   // collection of quotes from quoteDataProvider
   const quotes = useQuote()
 
-  let quoteHtmlRepresentations = ""
-  for(const currentQuoteObj of quotes){
-    quoteHtmlRepresentations += quotesAsHtml(currentQuoteObj)
-  }
-
   // updating HTML of DOM element with quote list html
   contentElement.innerHTML += `
       <article class="quotes">
-        ${quoteHtmlRepresentations}
+        ${quotes.map(currentQuoteObj => quotesAsHtml(currentQuoteObj)).join('')}
       </article>
   `
 }
